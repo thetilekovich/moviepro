@@ -1,0 +1,230 @@
+#header{
+    background: rgb(2, 65, 2);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 30px 0;
+}
+
+.header_left{
+    display: flex;
+    align-items: center;
+}
+.header_logo{
+    margin: 0 30px 0 0 ;
+}
+.header_logo span{
+    color: red;
+}
+.menu_item{
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 5px;
+    font-weight: 600;
+    transition: .5s;
+    color: wheat;
+}
+.header_right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.set-bg{
+    position: absolute;
+    z-index: 21;
+    right: 10px;
+    top: 90px;
+    width: 65px;
+    height: 38px;
+    border-radius: 40px;
+    padding: 2px;
+    background: #000;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.set-bg div{
+    width: 33px;
+    height: 33px;
+    background: wheat;
+    border-radius: 50%;
+}
+.active{
+    transform: scale(1.2);
+    border-bottom: 4px solid rgb(255, 136, 0);
+    color: rgb(255, 136, 0);
+}
+
+/* -----------------------------------SEARCH --------------------------------------------------------------------------- */
+
+.search_input{
+    background: none;
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 10px 0 0 10px;
+    font-size: 17px;
+    font-weight: 400;
+    border-right: none;
+}
+.search_input:focus{
+    box-shadow: none;
+    outline: none;
+    color: rgb(36, 5, 0);
+}
+.search_btn{
+    padding: 5px 10px ;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid black;
+    background: none;
+    transition: .3s;
+}
+.search_btn:hover{
+    background: #000;
+    color: wheat;
+    cursor: pointer;
+}
+/* -----------------------------------BURGER--------------------------------------------------------------------------- */
+
+
+
+
+.header_burger_menu{
+    display: none;
+}
+.burger_item{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    z-index: 20;
+    background: #272727;
+    padding: 70px 20px 20px; 
+    top: 60px;
+    align-items: flex-start;
+    transition: 1s;
+}
+
+
+
+.b_menu_item{
+    transition: .4s;
+    margin: 10px;
+    color: wheat;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 0 5px;
+}
+.menu_burger{
+    cursor: pointer;
+    position: relative;
+    left: 0px;
+
+}
+.menu_burger div{
+    width: 35px;
+    height: 3px;
+    margin: 5px 0;
+    transition: 1s;
+    background: wheat;
+}
+
+.burger_first{
+    transform: rotate(-45deg);
+    position: absolute;
+    top: -5px;
+}
+.burger_middle{
+opacity: 0;
+}
+.burger_last{
+    transform: rotate(45deg);
+    position: absolute;
+    top: -5px;
+}
+
+
+
+/* -----------------------------------MEDIA--------------------------------------------------------------------------- */
+
+@media  screen and (max-width: 1100px) {
+    .search_input{
+        width: 180px;
+    }
+    
+}
+@media  screen and (max-width: 1032px) {
+    .search_input{
+        width: 130px;
+    }
+    
+}
+@media  screen and (max-width: 950px) {
+    .search_input{
+      width: 110px;
+      font-size: 15px;
+    }
+    .search_btn{
+        font-size: 17px;
+        padding: 4px 8px;
+    }
+}
+@media  screen and (max-width: 915px) {
+    .search_input{
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+        border: 1px solid wheat;
+        border-radius: 10px;
+    }
+    .search_btn{
+        display: none;
+    }
+}
+@media  screen and (max-width: 825px) {
+    .search_input{
+        display: none;
+    }
+    
+}
+@media  screen and (max-width: 735px) {
+
+    .menu_item{
+        font-size: 18px;
+    }
+    .header_logo{
+        font-size: 24px;
+    }
+}
+
+@media  screen and (max-width: 675px) {
+    .search_btn{
+        display: none;
+    }
+    .menu_item{
+        font-size: 16px;
+    }
+    .header_logo{
+        font-size: 17px;
+    }
+}
+@media  screen and (max-width: 515px) {
+    .header_menu{
+        display: none;
+    }
+    .header_logo{
+        font-size: 20px;
+    }
+    .header_burger_menu{
+        display: block;
+    }
+}
