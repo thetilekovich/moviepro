@@ -180,7 +180,7 @@ function MoviePage({dark}) {
                             </div>
                         </div>  
                         <div className='movie_trailer' id='movie_trailer'>
-                            <h1 className='trailer_title'>Trailer:</h1>
+                            <h1 className='trailer_title'>Videos:</h1>
                            <YoutubeVideo video={video} />
                         </div>                  
                     </div>

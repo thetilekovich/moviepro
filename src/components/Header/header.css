@@ -106,11 +106,12 @@
     position: absolute;
     right: 0;
     z-index: 20;
-    background: #272727;
+    background: #000;
     padding: 70px 20px 20px; 
     top: 60px;
     align-items: flex-start;
     transition: 1s;
+    box-shadow: -5px 5px 10px 3px gray;
 }
 
 

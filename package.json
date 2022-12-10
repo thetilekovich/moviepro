@@ -1,7 +1,7 @@
 {
   "name": "films-pro",
   "version": "0.1.0",
-  "homepage": "https://thetilekovich.github.io/moviepro",
+  "homepage": "https://thetilekovich.github.io/moviepro/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

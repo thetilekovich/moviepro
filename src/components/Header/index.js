@@ -48,7 +48,6 @@ function Header(props) {
                             <div className={burger ? 'burger_last' : ''}></div>
                         </div>
                         <nav className='burger_item' style={{
-                            background: `${dark ? 'rgb(2, 65, 2)' : 'rgb(2, 65, 2)'}`,
                             transform:  `${burger ? 'scale(1)' : 'scale(0)'}`,
                             transformOrigin: `top right`
                         }}>
