@@ -1,9 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './home.css'
 import { GetFilms } from '../GetFilms';
-import Card from '../pages/Card';
-import PersonCard from '../pages/PersonCard';
-import { Link } from 'react-router-dom';
 import Section from './cmp/Section';
 
 

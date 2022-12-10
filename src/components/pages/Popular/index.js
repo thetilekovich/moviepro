@@ -12,7 +12,7 @@ function Popular(props) {
     useEffect(()=> {
         GetFilms('popular', count)
         .then(({results}) => setPopular(results))
-    }, [])
+    }, count)
     return ( 
         <section id='category'>
             

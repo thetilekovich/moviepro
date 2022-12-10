@@ -6,7 +6,7 @@ import PersonCard from '../../../pages/PersonCard';
 
 function Section(props) {
     const {dark, title, data, count, typeOfCard} = props
-    if(typeOfCard == 'person'){
+    if(typeOfCard === 'person'){
        return (
         <div className='movie content_gen'
         
@@ -26,7 +26,7 @@ function Section(props) {
         </div>
        ) 
     }
-    if(typeOfCard == 'movie') { 
+    if(typeOfCard === 'movie') { 
         return(
             <div className='actors content_gen'
             onClick={() => {

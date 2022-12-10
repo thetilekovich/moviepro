@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './header.css'
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 
 function Header(props) {
-    const {dark, setDark, search, setSearch, burger, setBurger, setOpen, open} = props
+    const {dark, setDark, search, setSearch, burger, setBurger} = props
     return ( 
         <header id='header' >
             <div className='container'>

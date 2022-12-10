@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import './moviepage.css'
 import Apikey from '../../../assets/Apikey';
@@ -8,7 +8,6 @@ import 'react-circular-progressbar/dist/styles.css';
 import {MdPlayCircleOutline} from 'react-icons/md'
 import Starrings from './cmp/Starrings';
 import bgImage from '../../../assets/img/bg.jpg'
-import profile from '../../../assets/img/profile.png'
 import YoutubeVideo from '../Video';
 
 
@@ -67,7 +66,7 @@ function MoviePage({dark}) {
         getDetail(movieId)
         releaseFunc(movieId)
         getTrailer(movieId)
-    }, [])
+    }, movieId)
 
     let rating = details.vote_average || 5
     rating = Math.round(rating * 10)
@@ -121,7 +120,7 @@ function MoviePage({dark}) {
                                         </div>
                                     </div>
                                     <div className='movie_link'>
-                                        <a className='movie_link' href={details.homepage || ''} target="_blank">Official site: &nbsp;{details.homepage || 'Not specified'}</a>
+                                        <a className='movie_link' href={details.homepage || ''} rel="noreferrer"  target="_blank">Official site: &nbsp;{details.homepage || 'Not specified'}</a>
                                               
                                     </div>
                                     <div className='movie_tagline'>

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import {Link, useParams} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 import Apikey from '../../../assets/Apikey';
 import './actorpage.css'
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
@@ -37,7 +37,7 @@ function ActorPage({dark}) {
         getActor(actorId, Apikey)
         GetFilms('popular', 1, 'person')
         .then(({results}) => setPerson(results))
-    }, [])
+    }, actorId)
     return(
         <section id='movie'>
 
