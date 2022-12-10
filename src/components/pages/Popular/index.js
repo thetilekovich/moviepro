@@ -19,7 +19,7 @@ function Popular(props) {
             <div className='container'>
                 <div className='category'>
                     <div className='cards'>
-                    { popular.map(e => <Card key={e.id} e={e}/>) }
+                    { popular.map(e => <Card dark={dark} key={e.id} e={e}/>) }
                     
                     </div>
                     <div className='cards_btn'>

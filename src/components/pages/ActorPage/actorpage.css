@@ -1,0 +1,264 @@
+.actor_header_gen{
+    background: linear-gradient(to bottom right, rgba(31.5, 10.5, 10.5, .5), rgba(31.5, 10.5, 10.5, 0.84));
+    background-repeat: no-repeat;
+}
+
+.actor_header_content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: white;
+}
+.actor_header{
+    padding: 50px 0;
+}
+.actor_img{
+    width:20vw;
+    margin: 0 100px 0 0;
+    box-shadow: 0 0 30px 10px rgb(105, 68, 68);
+}
+.actor_name{
+    font-size: 40px;
+}
+.actor_info_1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.actor_info_1 li{
+    margin: 0 10px;
+    letter-spacing: 1.5px;
+}
+
+.actor_certif{
+    color: rgb(255, 119, 0);
+    margin: 0 10px 0 0;
+    border: 2px solid rgb(255, 111, 0);
+    padding: 2px;
+    list-style: none;
+}
+.release_data{
+    list-style: none;
+    font-weight: 400;
+    font-size: 20px;
+}
+.actor{
+    font-weight: 600;
+    font-size: 17px;
+    padding: 3px;
+    display: inline;
+
+    border-bottom: 3px solid rgb(255, 111, 0);
+}
+.actor_info_1_item{
+    display: flex;
+}
+
+.actor_names{
+    padding: 5px;
+    color: wheat;
+    font-weight: 500;
+    font-size: 15px;
+    font-style: italic;
+    margin: 10px 0;
+}
+.actor_info_2{
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.actor_info_2_item{
+    margin: 0 30px 0 0;
+}
+.actor_info_2_item h3{
+    font-size: 17px;
+    color: orange;
+}
+.actor_info_2_item h1{
+    margin: 5px 0;
+    font-weight: 500;
+}
+.actor_circle{
+    width: 80px;
+    height: 80px;
+    font-weight: 900;
+    background: rgb(6, 19, 14);
+    border-radius: 50%;
+    border: 5px solid rgb(6, 19, 14);
+    margin: 20px 0;
+}
+
+.actor_interview_btn{
+    background: none;
+    border: none;
+    font-size: 15px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: .6s;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    margin: 0 20px ;
+}
+.actor_interview_btn:hover{
+    color: green;
+    transform: scale(1.07);
+
+}
+
+.actor_biography{
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 10px 10px;
+    max-height: 300px;
+    overflow-y: scroll;
+
+}
+.actor_biography p{
+    font-size: 15px;
+}
+
+.actor_bio_gen h4{
+    border-radius: 10px 10px 0 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    font-size: 25px;
+}   
+/* ================================MOVIE BODY====================================================== */
+
+.actor_body{
+    padding: 50px 0;
+}
+.actor_movies_title{
+    font-size: 25px;
+    margin: 20px 0;
+} 
+
+.actor_movies_gen{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    padding: 20px 25px 20px 0;
+    box-shadow: inset 0 0 20px 5px black;
+    
+} 
+
+ .actor_movies_item{
+    width: 100px;
+    padding: 10px;
+    margin: 0 10px;
+
+}
+.actor_movies_img{
+    width: 100%;
+    
+}
+.actor_movie_name{
+    font-size: 15px;
+    margin:  0  0 5px 0;
+}
+
+.profile_text p{
+    font-size: 13px
+}
+
+.actor_info{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.actor_info_item{
+    margin: 20px;
+    padding: 20px 20px;
+    box-shadow: 0 0 20px 5px black;
+}
+.actor_info_item h3{
+    font-weight: 700;
+}
+.actor_info_item h2,.actor_info_item li{
+    font-weight: 900;
+    color: orange;
+}
+
+.actor_names{
+    max-height: 100px;
+    background: rgba(193, 8, 8, 0.5);
+    padding: 5px 10px;
+    overflow-y: scroll;
+    border-radius: 10px;
+
+}
+
+.another_name{
+    margin: 5px 10px;
+}
+
+
+
+
+
+/* ================================MEDIA====================================================== */
+
+
+@media screen and (max-width: 893px) {
+    .actor_header_content{
+        flex-wrap: wrap;
+    }
+    .actor_name{
+        margin: 10px;
+    }
+
+}
+@media screen and (max-width: 700px) {
+    .actor_header_content{
+        flex-wrap: wrap;
+    }
+    .actor_name{
+        font-size: 30px ;
+    }
+    .actor_info_1 li{
+        font-size: 15px;
+    }
+    .actor_info_1_item{
+        align-items: center;
+        margin: 10px 0;
+    }
+    .actor_info_1{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .actor_img{
+        width: 200px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .actor_name{
+        font-size: 25px;
+
+    }
+    .actor_bio_gen h4{
+        font-size: 20px;
+    }   
+    .actor_biography p{
+        font-size: 15px;
+    }
+    .actor_names{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .actor_bio_gen h4{
+        font-size: 16px;
+    }   
+    .actor_biography p{
+        font-size: 13px;
+    }
+    .actor_names{
+        font-size: 13px;
+    }
+}

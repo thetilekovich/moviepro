@@ -2,14 +2,14 @@
 
 #home{
     padding: 30px 0;
+    
 }
 
 
-.home{
+.home_gen{
     background-image: url("https://www.themoviedb.org/assets/2/v4/marketing/deadpool-06f2a06d7a418ec887300397b6861383bf1e3b72f604ddd5f75bce170e81dce9.png"),
-     url('https://www.themoviedb.org/assets/2/v4/marketing/red_pipes-594140f35efb300741add9827cc4f41053b0a4bb7ba249a40375377cc9d22d47.svg');
-    background-repeat: no-repeat;
-
+    url('https://www.themoviedb.org/assets/2/v4/marketing/red_pipes-594140f35efb300741add9827cc4f41053b0a4bb7ba249a40375377cc9d22d47.svg');
+   background-repeat: no-repeat;
 }
 .home_title{
     font-family: 'anurati', sans-serif;

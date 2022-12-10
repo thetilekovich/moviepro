@@ -18,7 +18,7 @@ function Upcoming(props) {
             <div className='container'>
                 <div className='category'>
                     <div className='cards'>
-                    { upcoming.map(e => <Card key={e.id} e={e}/>) }
+                    { upcoming.map(e => <Card  dark={dark} key={e.id} e={e}/>) }
                     </div>
                     <div className='cards_btn'>
                         <SlideBtn title='Previous' setCount={setCount} setCategory={setUpcoming} dark={dark} cat='upcoming' count={count}/>

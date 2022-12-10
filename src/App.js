@@ -7,19 +7,27 @@ import Best from './components/pages/Best';
 import Popular from './components/pages/Popular';
 import Upcoming from './components/pages/Upcoming';
 import Home from './components/Home';
+import MoviePage from './components/pages/MoviePage';
+import ActorPage from './components/pages/ActorPage';
 
 function App() {
+  const [burger, setBurger] = useState(false)
   const [dark, setDark] = useState(true)
   const [search, setSearch] = useState('')
   return (
-    <div className='App' style={{background: `${dark ? '#272727' : 'wheat'}`, color: `${dark ? 'wheat' : 'black'}`}}>
-      <Header dark={dark} setDark={setDark} search={search} setSearch={setSearch}/>
+    <div className='App' style={{background: `${dark ? '#272727' : 'white'}`, color: `${dark ? 'wheat' : 'black'}`}} onClick={(e) => {
+      setTimeout(() => {
+        setBurger(false)
+      }, 4000)
+}}>
+      <Header dark={dark} setDark={setDark} search={search} setSearch={setSearch} burger={burger} setBurger={setBurger}/>
       <Routes>
-        <Route path='/moviepro' element={<Home dark={dark}/>}/>
-        <Route path='/moviepro/pop' element={<Popular dark={dark}/>}/>
-        <Route path='/moviepro/soon' element={<Upcoming dark={dark}/>}/>
-        <Route path='/moviepro/best' element={<Best dark={dark}/>}/>
-        {/* <Route path='/movie/:id' element={<PageGen dark={dark} cat='top_rated'/>}/> */}
+        <Route path='/' element={<Home dark={dark}/>}/>
+        <Route path='/pop' element={<Popular dark={dark}/>}/>
+        <Route path='/soon' element={<Upcoming dark={dark}/>}/>
+        <Route path='/best' element={<Best dark={dark}/>}/>
+        <Route path='/movies/movie-info/:movieId' element={<MoviePage dark={dark}/>}/>
+        <Route path='/actors/actor-info/:actorId' element={<ActorPage dark={dark}/>}/>
       </Routes>
       <Footer/>
     </div>

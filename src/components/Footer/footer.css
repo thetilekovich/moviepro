@@ -1,5 +1,5 @@
 #footer{
-    background: rgb(2, 65, 2);
+    background: rgb(0, 0, 0);
 }
 
 .footer{
@@ -35,6 +35,10 @@
 }
 .footer_item{
     margin: 20px 30px;
+}
+.footer_item li a{
+    color: wheat;
+    text-decoration: none;
 }
 /* ------------------------------MEDIA---------------------------------------------------------------- */
 

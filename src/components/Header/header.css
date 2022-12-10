@@ -1,5 +1,5 @@
 #header{
-    background: rgb(2, 65, 2);
+    background: rgb(0, 0, 0);
 }
 
 .header{
@@ -139,16 +139,18 @@
 }
 
 .burger_first{
-    transform: rotate(-45deg);
+    transform: rotate(410deg);
     position: absolute;
+    transform-origin: center;
     top: -5px;
 }
 .burger_middle{
 opacity: 0;
 }
 .burger_last{
-    transform: rotate(45deg);
+    transform: rotate(-410deg);
     position: absolute;
+    transform-origin: center;
     top: -5px;
 }
 

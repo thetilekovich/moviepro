@@ -1,6 +1,6 @@
 import axios from "axios"
+import Apikey from '../../assets/Apikey'
 
-const Apikey = '6b661c440c72e43e50d8b011d23cf882'
 
 export const GetFilms = async (movieId = '' , count = 1, what='movie') => {
     const getFilms = await axios(` https://api.themoviedb.org/3/${what}/${movieId}?api_key=${Apikey}&language=en-US&page=${count}`)
