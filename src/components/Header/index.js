@@ -1,6 +1,7 @@
 import React from 'react';
 import './header.css'
-import { NavLink} from 'react-router-dom';
+import { NavLink, Link} from 'react-router-dom';
+
 
 function Header(props) {
     const {dark, setDark, search, setSearch, burger, setBurger} = props
@@ -9,7 +10,9 @@ function Header(props) {
             <div className='container'>
                 <div className='header'>
                     <div className='header_left'>
-                        <h1 className='header_logo' style={{color: `${dark ? 'white' : 'white'}`}}>FILM<span>PRO</span></h1>
+                        <Link className='logo_link' to='/'>
+                            <h1 className='header_logo' style={{color: `${dark ? 'white' : 'white'}`}}>FILM<span>PRO</span></h1>
+                        </Link>
                         <nav className='header_menu' >
                             <NavLink  className='menu_item' to='/'> Home </NavLink>    
                             <NavLink className='menu_item' to='/pop'> Popular </NavLink>
@@ -21,7 +24,7 @@ function Header(props) {
 
 {/* =======================================================SEARCH===================================================== */}
 
-
+{/* 
                     <div className='header_search'>
                             <input onChange={(e) => setSearch(e.target.value)} placeholder='Search' className='search_input' type="search" style={{
                                 border: `${dark ? '1px solid wheat' : '1px solid wheat'}`,
@@ -33,14 +36,14 @@ function Header(props) {
                                 border: `${dark ? '1px solid wheat' : '1px solid wheat'}`,
                             }}
                             >Search</button>
-                    </div>
+                    </div> */}
 
 
 {/* =======================================================BURGER MENU===================================================== */}
 
 
                     <div className='header_burger_menu' >
-                        <div className={`${burger ? 'not menu_burger' : 'menu_burger' }`} onClick={() => {
+                        <div className='menu_burger' onClick={() => {
                             setBurger(!burger)
                         }}>
                             <div className={burger ? 'burger_first' : ''} ></div>
@@ -54,7 +57,7 @@ function Header(props) {
                             <NavLink  className='b_menu_item' to='/'> Home </NavLink>
                             <NavLink className='b_menu_item' to='/pop'> Popular </NavLink>
                             <NavLink  className='b_menu_item'  to='/soon'> Upcoming </NavLink>
-                            <NavLink className=' b_menu_item'  to='/best'> Best films </NavLink>
+                            <NavLink className=' b_menu_item'  to='/best'> Best forever </NavLink>
                         </nav>
                     </div>
 

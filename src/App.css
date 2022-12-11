@@ -12,3 +12,31 @@ body{
   width: 90%;
   margin: 0 auto;
 }
+
+.start_container{
+  position: relative;
+}
+.lets_start{
+  position: absolute;
+  top: 20px;
+  padding: 9px 18px ;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 900;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: .4s;
+}
+.lets_start:hover{
+  transform: scale(1.1);
+  background: black;
+  color: wheat;
+  border-color: wheat;
+}
+.wellcome_gen{
+  background-image: url('./assets/img/wellcomeBg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}

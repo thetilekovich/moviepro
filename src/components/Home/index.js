@@ -36,7 +36,7 @@ function Home(props) {
                 <div className='home'>
                     <div className='home_text'>
                         <h1 className='home_title'>Wellcome to <span className='logo'>Film<span>PRO</span></span> </h1>
-                        <p>Information and trailers of million films, TV shows , series and actors, enjoy!</p>
+                        <p>Million films, TV shows , series and actors datas, enjoy learning!</p>
                     </div>
 
 

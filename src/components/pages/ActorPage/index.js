@@ -9,7 +9,7 @@ import {MdPlayCircleOutline} from 'react-icons/md'
 import bgImage from '../../../assets/img/bg.jpg'
 import { GetFilms } from '../../GetFilms';
 import Section from '../../Home/cmp/Section';
-
+import profile from '../../../assets/img/profile.png'
 
 function ActorPage({dark}) {
     const {actorId} = useParams()
@@ -37,7 +37,7 @@ function ActorPage({dark}) {
         getActor(actorId, Apikey)
         GetFilms('popular', 1, 'person')
         .then(({results}) => setPerson(results))
-    }, actorId)
+    }, [])
     return(
         <section id='movie'>
 
@@ -51,7 +51,7 @@ function ActorPage({dark}) {
                         <div className='actor_header'>
                             <div className='actor_header_content'>
                                 <div className='actor_header_image'>
-                                    <img className='actor_img' src={`https://image.tmdb.org/t/p/w440_and_h660_face/${actorInfo.profile_path}`} alt="" />
+                                    <img className='actor_img' src={`https://image.tmdb.org/t/p/w440_and_h660_face/${actorInfo.profile_path}` || profile} alt="" />
                                 </div>
                                 <div className='actor_header_info'>
                                     <h1 className='actor_name'>{actorInfo.name}</h1>

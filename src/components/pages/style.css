@@ -2,18 +2,15 @@
     padding: 50px 0;
 }
 .cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    justify-items: center;
 }
 .card{
     width: 180px;
     margin: 0 10px 10px ;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
 }
 .card_img{
     width: 100%;
@@ -39,7 +36,6 @@
 @media screen and (max-width: 460px) {
     .card{
         width: 110px;
-        margin: 0 10px 10px ;
     }
     .card_img{
         width: 120%;

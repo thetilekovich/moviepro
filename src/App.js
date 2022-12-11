@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -17,8 +17,8 @@ function App() {
   return (
     <div className='App' style={{background: `${dark ? '#272727' : 'white'}`, color: `${dark ? 'wheat' : 'black'}`}} onClick={(e) => {
       setTimeout(() => {
-        setBurger(false)
-      }, 4000)
+        
+      }, 1000)
 }}>
       <Header dark={dark} setDark={setDark} search={search} setSearch={setSearch} burger={burger} setBurger={setBurger}/>
       <Routes>
@@ -29,6 +29,24 @@ function App() {
         <Route path='/movies/movie-info/:movieId' element={<MoviePage dark={dark}/>}/>
         <Route path='/actors/actor-info/:actorId' element={<ActorPage dark={dark}/>}/>
       </Routes>
+      <section id='wellcome'>
+            <div className='wellcome_gen'>
+            <div className='container'>
+                <div className='home'>
+                    <div className='home_text'>
+                        <h1 className='home_title'>Wellcome to <span className='logo'>Film<span>PRO</span></span> </h1>
+                        <p>Million films, TV shows , series and actors datas, enjoy learning!</p>
+                        <div className='start_container'>
+                          <Link className='lets_start' to='/' onClick={() => {
+                            window.scrollY(500)
+                          }}>Let's Start</Link>
+                      </div>
+                    </div>
+                   
+                </div>
+            </div>
+            </div>
+      </section>        
       <Footer/>
     </div>
   );

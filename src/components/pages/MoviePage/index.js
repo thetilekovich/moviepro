@@ -66,7 +66,7 @@ function MoviePage({dark}) {
         getDetail(movieId)
         releaseFunc(movieId)
         getTrailer(movieId)
-    }, movieId)
+    }, [])
 
     let rating = details.vote_average || 5
     rating = Math.round(rating * 10)
