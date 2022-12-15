@@ -35,8 +35,75 @@ body{
   color: wheat;
   border-color: wheat;
 }
+#wellcome{
+  background-image: url('./assets/img/wellcomeBg.jpg');
+  background-position: bottom;
+}
 .wellcome_gen{
   background-image: url('./assets/img/wellcomeBg.jpg');
   background-repeat: no-repeat;
   background-position: center;
+}
+
+/* -----------------------------------SEARCH --------------------------------------------------------------------------- */
+
+
+.home_search{
+  display: flex;
+  justify-content: center ;
+  margin: 45px 0 0;
+}
+.search_input{
+  background: none;
+  border: 1px solid wheat;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px 0 0 10px;
+  font-size: 20px;
+  font-weight: 400;
+  border-right: none;
+  width: 60%;
+  min-width: 250px;
+  height: 47px;
+  outline: none;
+
+}
+.search_input:focus{
+    background: #000;
+}
+.search_btn{
+  padding: 5px 10px ;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid wheat;
+  background: none;
+  color: white;
+  transition: .3s;
+}
+.search_btn:hover{
+  background: #000;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 811px) {
+
+  .search_input{
+    height: 35px;
+  }
+}
+
+@media screen  and (max-width:355px){
+  .search_btn{
+    font-weight: 200;
+    font-size: 13px;
+    padding: 3px 7px;
+  }
+  .search_input{
+    font-weight: 300;
+    font-size: 15px;
+    padding: 3px 7px;
+    height: 30px;
+    min-width: 150px;
+  }
 }

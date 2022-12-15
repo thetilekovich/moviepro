@@ -3,10 +3,11 @@ import { GetFilms } from '../../GetFilms';
 import '../style.css'
 import Card from '../Card';
 import SlideBtn from '../../../assets/btn/SlideBtn';
+import Search from '../../Search';
 
 
 function Popular(props) {
-    const {dark} = props
+    const {dark,  search, setSearch} = props
     const [popular, setPopular] = useState([])
     const [count, setCount] = useState(1)
     useEffect(()=> {
@@ -17,6 +18,8 @@ function Popular(props) {
         <section id='category'>
             
             <div className='container'>
+            <Search search={search} setSearch={setSearch}/>
+
                 <div className='category'>
                     <div className='cards'>
                     { popular.map(e => <Card dark={dark} key={e.id} e={e}/>) }

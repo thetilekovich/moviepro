@@ -3,10 +3,11 @@ import { GetFilms } from '../../GetFilms';
 import '../style.css'
 import Card from '../Card';
 import SlideBtn from '../../../assets/btn/SlideBtn';
+import Search from '../../Search';
 
 
 function Best(props) {
-    const {dark} = props
+    const {dark, search, setSearch} = props
     const [best, setBest] = useState([])
     const [count, setCount] = useState(1)
     useEffect(()=> {
@@ -16,6 +17,7 @@ function Best(props) {
     return ( 
         <section id='category'>
             <div className='container'>
+            <Search search={search} setSearch={setSearch}/>
                 <div className='category'>
                     <div className='cards'>
                     { best.map(e => <Card  dark={dark} key={e.id} e={e}/>) }

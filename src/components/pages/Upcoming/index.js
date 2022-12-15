@@ -3,10 +3,10 @@ import { GetFilms } from '../../GetFilms';
 import '../style.css'
 import Card from '../Card';
 import SlideBtn from '../../../assets/btn/SlideBtn';
-
+import Search from '../../Search';
 
 function Upcoming(props) {
-    const {dark} = props
+    const {dark,  search, setSearch} = props
     const [upcoming, setUpcoming] = useState([])
     const [count, setCount] = useState(1)
     useEffect(()=> {
@@ -16,6 +16,8 @@ function Upcoming(props) {
     return ( 
         <section id='category'>
             <div className='container'>
+            <Search search={search} setSearch={setSearch}/>
+
                 <div className='category'>
                     <div className='cards'>
                     { upcoming.map(e => <Card  dark={dark} key={e.id} e={e}/>) }

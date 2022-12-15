@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import movieImage from '../../../assets/img/profile.jpg'
 
 function Card(props) {
+    const winWidth = window.innerWidth
     const {e, dark} = props
     const title = e.title || '' 
     return ( 
@@ -17,7 +18,8 @@ function Card(props) {
         }} className='card_img' src={`https://image.tmdb.org/t/p/w440_and_h660_face/${e.poster_path}` || movieImage} alt="" />
             </Link>
                 <h4 style={{
-                    fontSize: `${title.length < 11 ? '18px' : title.length <  20 ? '14px' : '10px'}`
+                    fontSize: `${title.length < 10 && winWidth < 700 ? '17px' : title.length <  20 && winWidth < 700 ? '14px' : title.length > 20 && winWidth < 700 ? '10px' : 
+                    title.length > 20 && winWidth > 700 ? '15px' : '20px'}`
                 }}>{title}</h4>
         </div>
      );

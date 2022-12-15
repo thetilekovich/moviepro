@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './header.css'
 import { NavLink, Link} from 'react-router-dom';
+
 
 
 function Header(props) {
@@ -10,11 +11,11 @@ function Header(props) {
             <div className='container'>
                 <div className='header'>
                     <div className='header_left'>
-                        <Link className='logo_link' to='/'>
-                            <h1 className='header_logo' style={{color: `${dark ? 'white' : 'white'}`}}>FILM<span>PRO</span></h1>
+                        <Link className='logo_link' to='/moviepro'>
+                            <h1 className='header_logo' style={{color: `${dark ? 'white' : 'white'}`}}>MOVIE<span>PRO</span></h1>
                         </Link>
                         <nav className='header_menu' >
-                            <NavLink  className='menu_item' to='/'> Home </NavLink>    
+                            <NavLink  className='menu_item' to='/moviepro'> Home </NavLink>    
                             <NavLink className='menu_item' to='/pop'> Popular </NavLink>
                             <NavLink  className='menu_item'  to='/soon'> Upcoming </NavLink>
                             <NavLink className='menu_item'  to='/best'> Best Forever </NavLink>
@@ -24,19 +25,20 @@ function Header(props) {
 
 {/* =======================================================SEARCH===================================================== */}
 
-{/* 
-                    <div className='header_search'>
+
+                    {/* <div className='header_search'>
                             <input onChange={(e) => setSearch(e.target.value)} placeholder='Search' className='search_input' type="search" style={{
                                 border: `${dark ? '1px solid wheat' : '1px solid wheat'}`,
                                 color: `${dark ? 'wheat' : 'wheat'}`,
                                 borderRight : 'none'
                             }} />
-                            <button onClick={() => console.log(search)} className='search_btn'style={{
+                            <button onClick={() => navigate(`/search/${search}`)} className='search_btn'style={{
                                 color: `${dark ? 'wheat' : 'wheat'}`,
                                 border: `${dark ? '1px solid wheat' : '1px solid wheat'}`,
                             }}
                             >Search</button>
                     </div> */}
+                    
 
 
 {/* =======================================================BURGER MENU===================================================== */}
@@ -54,7 +56,7 @@ function Header(props) {
                             transform:  `${burger ? 'scale(1)' : 'scale(0)'}`,
                             transformOrigin: `top right`
                         }}>
-                            <NavLink  className='b_menu_item' to='/'> Home </NavLink>
+                            <NavLink  className='b_menu_item' to='/moviepro'> Home </NavLink>
                             <NavLink className='b_menu_item' to='/pop'> Popular </NavLink>
                             <NavLink  className='b_menu_item'  to='/soon'> Upcoming </NavLink>
                             <NavLink className=' b_menu_item'  to='/best'> Best forever </NavLink>

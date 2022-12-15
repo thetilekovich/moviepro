@@ -10,7 +10,7 @@ function Footer(props) {
                     color: `${dark ? 'wheat' :'wheat'}`
                 }}>
                      <div>
-                        <h1 className='footer_logo'>FILM<span>PRO</span></h1>
+                        <h1 className='footer_logo'>MOVIE<span>PRO</span></h1>
                         <p>thanks for visiting</p>
                     </div>
                     <div className='footer_gen'>
