@@ -6,9 +6,9 @@ import Apikey from '../../../assets/Apikey';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import {MdPlayCircleOutline} from 'react-icons/md'
-import Starrings from './cmp/Starrings';
+import Starrings from './cmp/Starrings.js';
 import bgImage from '../../../assets/img/bg.jpg'
-import YoutubeVideo from '../Video';
+import Video from '../Video';
 
 
 function MoviePage({dark}) {
@@ -39,7 +39,7 @@ function MoviePage({dark}) {
         try{
             const api =  axios(` https://api.themoviedb.org/3/movie/${id}/videos?api_key=${Apikey}&language=en-US`)
             const {data: results} = await api
-            setVideo(results.results[0])
+            setVideo(results.results)
         }
         catch(e) {
             console.log(e)
@@ -67,7 +67,6 @@ function MoviePage({dark}) {
         releaseFunc(movieId)
         getTrailer(movieId)
     }, [])
-
     let rating = details.vote_average || 5
     rating = Math.round(rating * 10)
     return(
@@ -181,7 +180,7 @@ function MoviePage({dark}) {
                         </div>  
                         <div className='movie_trailer' id='movie_trailer'>
                             <h1 className='trailer_title'>Videos:</h1>
-                           <YoutubeVideo video={video} />
+                           <Video video={video} />
                         </div>                  
                     </div>
                 </div>

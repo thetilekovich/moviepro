@@ -1,3 +1,4 @@
+
 .category{
     padding: 50px 0;
 }
@@ -33,6 +34,24 @@
     background: red;
     cursor: pointer;
 }
+/* ========================================== SLIDER VIDEOS =================================================================*/
+
+.video{
+    text-align: center;
+}
+.video_item h1{
+    margin: 0 0 20px 0;
+}
+.video_item{
+    width: 200px;
+}
+.video_video{
+    margin: 0 0 40px 0;
+}
+
+
+/* ========================================== ADAPTIVE =================================================================*/
+
 @media screen and (max-width: 520px) {
     .card{
         width: 150px;

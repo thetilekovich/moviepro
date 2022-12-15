@@ -4,7 +4,7 @@ import { NavLink, Link} from 'react-router-dom';
 
 
 
-function Header(props) {
+function    Header(props) {
     const {dark, setDark, search, setSearch, burger, setBurger} = props
     return ( 
         <header id='header' >
@@ -25,19 +25,6 @@ function Header(props) {
 
 {/* =======================================================SEARCH===================================================== */}
 
-
-                    {/* <div className='header_search'>
-                            <input onChange={(e) => setSearch(e.target.value)} placeholder='Search' className='search_input' type="search" style={{
-                                border: `${dark ? '1px solid wheat' : '1px solid wheat'}`,
-                                color: `${dark ? 'wheat' : 'wheat'}`,
-                                borderRight : 'none'
-                            }} />
-                            <button onClick={() => navigate(`/search/${search}`)} className='search_btn'style={{
-                                color: `${dark ? 'wheat' : 'wheat'}`,
-                                border: `${dark ? '1px solid wheat' : '1px solid wheat'}`,
-                            }}
-                            >Search</button>
-                    </div> */}
                     
 
 

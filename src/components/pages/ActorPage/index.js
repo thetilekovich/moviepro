@@ -40,7 +40,6 @@ function ActorPage({dark}) {
     }, [])
     return(
         <section id='movie'>
-
             <section id='movie_header' style={{
             backgroundImage: `url('https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${actorInfo.profile_path || bgImage}')`,
             backgroundSize: '100vw',

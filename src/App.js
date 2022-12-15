@@ -29,24 +29,6 @@ function App() {
         <Route path='/actors/actor-info/:actorId' element={<ActorPage dark={dark} />} />
         <Route path='/search/:movieName' element={<SearchResult dark={dark} search={search} setSearch={setSearch}/>} />
       </Routes>
-      {/* <section id='wellcome'>
-            <div className='wellcome_gen'>
-            <div className='container'>
-                <div className='home'>
-                    <div className='home_text'>
-                        <h1 className='home_title'>Wellcome to <span className='logo'>Film<span>PRO</span></span> </h1>
-                        <p>Million films, TV shows , series and actors datas, enjoy learning!</p>
-                        <div className='start_container'>
-                          <Link className='lets_start' to='/moviepro' onClick={() => {
-                            window.scrollY(500)
-                          }}>Let's Start</Link>
-                      </div>
-                    </div>
-                   
-                </div>
-            </div>
-            </div>
-      </section>         */}
       <Footer />
 
     </div>
